@@ -13,5 +13,6 @@
             <label for="search" class="form-label">Rechercher par capitale</label>
             <input type="search" class="form-control" id="search">
         </div>
+        <div class="d-none" id="load">Chargement en cours...</div>
     </body>
 </html>

@@ -54,9 +54,16 @@ const createTable = (datas) => {
  * Affiche tous les pays
  */
 let allCountries = () => {
+    // Démarrage un texte de chargement
+    const load = document.querySelector('#load');
+    load.classList.remove('d-none');
+
     fetch('https://restcountries.com/v3.1/all')
         .then(response => response.json())
         .then(datas => {
+            // Efface le texte de chargement
+            load.classList.add('d-none');
+
             // console.log(datas);
             // Appelle la fonction permettant de créer le tableau HTML
             createTable(datas);
